@@ -3,6 +3,7 @@ import { Sidebar } from './components/Sidebar'
 import { Header } from './components/Header'
 import { OverviewPage } from './components/OverviewPage'
 import { PlaceholderPage } from './components/PlaceholderPage'
+import { Footer } from './components/Footer'
 import { useDarkMode } from './hooks/useDarkMode'
 
 type PageId = 'overview' | 'analytics' | 'customers' | 'orders' | 'reports' | 'settings'
@@ -30,7 +31,7 @@ export default function App() {
   const meta = PAGE_META[activePage]
 
   return (
-    <div className="min-h-screen bg-zinc-50 font-sans dark:bg-zinc-950 transition-colors duration-200">
+    <div className="min-h-screen bg-zinc-50 font-sans dark:bg-zinc-950 transition-colors duration-200 flex flex-col">
       <Sidebar
         collapsed={collapsed}
         onToggle={() => setCollapsed((c) => !c)}
@@ -47,17 +48,18 @@ export default function App() {
       />
       <main
         className={[
-          'min-h-screen pt-16 transition-all duration-250 sidebar-transition',
+          'pt-16 transition-all duration-250 sidebar-transition flex-1 flex flex-col',
           collapsed ? 'lg:pl-[68px]' : 'lg:pl-60',
         ].join(' ')}
       >
-        <div className="mx-auto p-6">
+        <div className="p-6 flex-1">
           {activePage === 'overview' ? (
             <OverviewPage />
           ) : (
             <PlaceholderPage title={meta.title} description={meta.description} />
           )}
         </div>
+        <Footer />
       </main>
     </div>
   )
