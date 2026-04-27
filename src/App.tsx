@@ -1,8 +1,8 @@
 import { useState } from 'react'
 import { Sidebar } from './components/Sidebar'
 import { Header } from './components/Header'
-import { OverviewPage } from './components/OverviewPage'
-import { PlaceholderPage } from './components/PlaceholderPage'
+import { OverviewPage } from './pages/OverviewPage'
+import { PlaceholderPage } from './pages/PlaceholderPage'
 import { Footer } from './components/Footer'
 import { useDarkMode } from './hooks/useDarkMode'
 

@@ -1,10 +1,9 @@
-
 import { TrendingUp, Users, ShoppingCart, DollarSign, ArrowRight, LucideIcon } from 'lucide-react'
-import { StatCard } from './StatCard'
-import { Card, CardHeader, CardTitle } from './Card'
-import { Badge } from './Badge'
-import { Avatar } from './Avatar'
-import { Button } from './Button'
+import { StatCard } from '../components/StatCard'
+import { Card, CardHeader, CardTitle } from '../components/Card'
+import { Badge } from '../components/Badge'
+import { Avatar } from '../components/Avatar'
+import { Button } from '../components/Button'
 
 type BadgeVariant = 'default' | 'success' | 'warning' | 'danger' | 'info'
 type AccentColor = 'zinc' | 'emerald' | 'blue' | 'amber' | 'rose'
