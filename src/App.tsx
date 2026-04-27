@@ -51,7 +51,7 @@ export default function App() {
           collapsed ? 'lg:pl-[68px]' : 'lg:pl-60',
         ].join(' ')}
       >
-        <div className="mx-auto max-w-6xl p-6">
+        <div className="mx-auto p-6">
           {activePage === 'overview' ? (
             <OverviewPage />
           ) : (
